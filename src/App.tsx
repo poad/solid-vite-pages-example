@@ -1,0 +1,9 @@
+import { useRoutes } from '@solidjs/router';
+import { type JSX } from 'solid-js/jsx-runtime';
+import routes from 'virtual:generated-pages-solid';
+
+export default function (): JSX.Element {
+  const Routes = useRoutes(routes);
+
+  return <Routes />;
+}
