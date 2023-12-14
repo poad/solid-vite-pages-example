@@ -1,1 +1,1 @@
-/// <reference types="vite-plugin-pages-solid/client" />
+/// <reference types="vite-plugin-pages/client" />
