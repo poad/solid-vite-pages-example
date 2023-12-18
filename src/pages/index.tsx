@@ -1,4 +1,4 @@
-import { Link } from '@solidjs/router';
+import { A } from '@solidjs/router';
 import { type JSX } from 'solid-js/jsx-runtime';
 import styles from './index.module.css';
 
@@ -7,10 +7,10 @@ export default function (): JSX.Element {
     <div class={styles.App}>
       <header class={styles.header}>
         <p>
-          <Link href="/about">about</Link>
+          <A href="/about">about</A>
         </p>
         <p>
-          <Link href="/test/hoge">test</Link>
+          <A href="/test/hoge">test</A>
         </p>
       </header>
     </div>
