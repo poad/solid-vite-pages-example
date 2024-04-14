@@ -1,10 +1,15 @@
-import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintImport from "eslint-plugin-import";
-import typeScriptESLintParser from '@typescript-eslint/parser';
-import solid from 'eslint-plugin-solid';
-import typeScriptESLint from '@typescript-eslint/eslint-plugin';
+// @ts-check
 
-export default [
+// @ts-ignore
+import eslintImport from "eslint-plugin-import";
+import solid from 'eslint-plugin-solid';
+import tseslint from 'typescript-eslint';
+import prettier from 'eslint-config-prettier';
+import { FlatCompat } from '@eslint/eslintrc';
+
+const compat = new FlatCompat();
+
+export default tseslint.config(
   {
     plugins: {
       eslintImport,
@@ -20,21 +25,19 @@ export default [
   },
   {
     plugins: {
-      typeScriptESLint,
       solid,
     },
-    files: ["./src/*.js", "./src/*.ts", "./src/*.jsx", "./src/*.tsx"],
-    languageOptions: {
-      globals: {
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly'
-      },
-      parser: typeScriptESLintParser,
-    },
+    files: ["./src/*.{js,ts,jsx,tsx}"],
     linterOptions: {
       noInlineConfig: true,
       reportUnusedDisableDirectives: true,
     },
   },
-  eslintConfigPrettier,
-];
+  {
+    files: ["./src/*.{js,ts,jsx,tsx}"],
+    // @ts-ignore
+    rules: {
+      ...prettier.rules,
+    },
+  },
+);
