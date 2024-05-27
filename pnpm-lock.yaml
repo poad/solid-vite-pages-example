@@ -55,8 +55,8 @@ importers:
         specifier: ^5.2.11
         version: 5.2.11
       vite-plugin-pages:
-        specifier: ^0.32.1
-        version: 0.32.1(vite@5.2.11)
+        specifier: ^0.32.2
+        version: 0.32.2(@solidjs/router@0.13.3(solid-js@1.8.17))(vite@5.2.11)
       vite-plugin-solid:
         specifier: ^2.10.2
         version: 2.10.2(@testing-library/jest-dom@6.4.5(vitest@1.6.0(jsdom@24.1.0)))(solid-js@1.8.17)(vite@5.2.11)
@@ -2039,13 +2039,22 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-plugin-pages@0.32.1:
-    resolution: {integrity: sha512-4oPlIbb+J+zpJGfT2xI/27xqY+qTkRc3MBgWKfbW6IWM3CTcSyybuL9kRMCFRdBHfmgkF28qDs7fqVf/HjH1Xw==}
+  vite-plugin-pages@0.32.2:
+    resolution: {integrity: sha512-wX4lRlylcTggwHUH7bV1SVJpQMz4ZUkbzzAbbBBH5M7c/9Yx5rAqrjYELIca6vLCoCpSd+r6/WI7KnvRK/Drcg==}
     peerDependencies:
+      '@solidjs/router': '*'
       '@vue/compiler-sfc': ^2.7.0 || ^3.0.0
+      react-router: '*'
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0
+      vue-router: '*'
     peerDependenciesMeta:
+      '@solidjs/router':
+        optional: true
       '@vue/compiler-sfc':
+        optional: true
+      react-router:
+        optional: true
+      vue-router:
         optional: true
 
   vite-plugin-solid@2.10.2:
@@ -4337,7 +4346,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-pages@0.32.1(vite@5.2.11):
+  vite-plugin-pages@0.32.2(@solidjs/router@0.13.3(solid-js@1.8.17))(vite@5.2.11):
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.3.4
@@ -4349,6 +4358,8 @@ snapshots:
       picocolors: 1.0.1
       vite: 5.2.11
       yaml: 2.4.2
+    optionalDependencies:
+      '@solidjs/router': 0.13.3(solid-js@1.8.17)
     transitivePeerDependencies:
       - supports-color
 
