@@ -20,7 +20,7 @@
   "devDependencies": {
     "@solidjs/testing-library": "^0.8.9",
     "@testing-library/jest-dom": "^6.5.0",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-prettier": "^5.2.1",
